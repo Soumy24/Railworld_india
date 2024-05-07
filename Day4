@@ -1,0 +1,151 @@
+             ----------------------------Functions and it's Types----------------------
+
+//A function is a block of code that performs a specific task and can be called upon to execute that task when needed. 
+
+/Example of Function
+/*
+public class Example {
+    // Function to add two numbers
+    public static int addNumbers(int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 10;
+        int result = addNumbers(num1, num2);
+        System.out.println("Sum: " + result);
+    }
+}
+*/
+
+//There are Several Types of Functions:
+
+// Static Method :- These methods belong to a class rather than an instance of the class. They can be called using the class name withoutcreating an object of the class.
+
+//Example:-
+
+/*
+public class Main {
+    public static void myStaticMethod() {
+        System.out.println("This is a static method.");
+    }
+}
+*/
+
+//Instance Methods :- These methods are associated with objects of a class. They can access instance variables and other instance methods directly.
+
+//Example:-
+
+/*
+public class MyClass {
+   public void myInstanceMethod() {
+        System.out.println("This is an instance method.");
+    }
+}
+*/
+
+//Constructor :- Constructors are special methods used to initialize objects. They have the same name as the class and are called automatically when an object is created.
+
+Example :-
+
+/*
+public class MyClass {
+    public MyClass() {
+        System.out.println("Constructor called.");
+    }
+}
+*/
+
+
+//Parameterized Methods :- These methods accept parameters, which are values passed to the method when it is called. Parameters allow methods to receive input and perform actions based
+on that input.
+
+Example :-
+
+/*
+public class MyClass {
+    public void myMethod(int num1, int num2) {
+        int sum = num1 + num2;
+        System.out.println("Sum: " + sum);
+    }
+}
+*/
+
+//Return Type Methods :- These methods return a value after performing their task. The return type is specified in the method signature.
+
+Example :-
+
+/*
+public class MyClass {
+    public int addNumbers(int num1, int num2) {
+        return num1 + num2;
+    }
+}
+*/
+
+
+
+                  ------------------------------Interfaces------------------------------
+//Interface in Java is a blueprint of a class. It has static constants and abstract methods. The interface in Java is a mechanism to achieve abstraction. There can be only abstract
+methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+
+Java Interface also represents the IS-A relationship.
+
+/*
+
+// Define the interface
+interface Shape {
+    // Method declarations (no implementation)
+    double calculateArea();
+    double calculatePerimeter();
+}
+
+// Implement the interface in a class
+class Circle implements Shape {
+    private double radius;
+
+    // Constructor
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Implementing interface methods
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Main class to test the interface and classes
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of Circle
+        Circle circle = new Circle(5);
+
+        // Call interface methods
+        double area = circle.calculateArea();
+        double perimeter = circle.calculatePerimeter();
+
+        // Print the results
+        System.out.println("Area of the circle: " + area);
+        System.out.println("Perimeter of the circle: " + perimeter);
+    }
+}
+
+*/
+
+            ------------------------------Nested Ternary Operation------------------------------
+
+//As you become more comfortable with the ternary operator, you might start to explore more complex uses, such as nested ternary 
+operations. A nested ternary operation is when a ternary operator is used within another ternary operator.
+
+//Here’s an example of a nested ternary operation:
+
+int number = 15;
+String result = (number > 10) ? (number > 20 ? "Greater than twenty" : "Between ten and twenty") : 
+"Less than or equal to ten";
+
+
+
