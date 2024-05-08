@@ -1,0 +1,61 @@
+- Program using 2F -
+
+public class JavaPrintfDoubleExample {
+  public static void main(String[] args) {
+    double mint = 12.1234;
+    System.out.printf("%,.2f", sum);
+  }
+}
+-------------------------------------------------------------------------------------
+
+             -Program of 2nd Highest -
+
+import java.util.*;
+public class DAY3 {
+
+    /* 
+    public static void main(String args[]){
+        int n = 5;
+        int arr[] = new int[5];
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i< arr.length; i++){
+            arr[i] = sc.nextInt();
+        }
+        
+            
+            int largest = arr[0];
+            for(int i = 0; i< arr.length;i++){
+                
+                if(arr[i] > largest){
+                    largest = arr[i];
+                }
+            }
+            System.out.println(largest);
+
+
+             int secondLargest = arr[0];
+            for(int i = 0; i< arr.length; i++){
+                 
+                // if (arr[i] > secondLargest && secondLargest != largest) {
+                    if (arr[i] > secondLargest && arr[i] < largest){
+                    secondLargest = arr[i];
+                    
+                }
+            }
+            System.out.println(secondLargest);
+            
+
+    }
+
+------------------------------------------------------------------------------
+
+                     -program to swap two numbers-
+
+    DO SWAPPING WITHOUT USING THIRD VALUE
+    public static void main(String args[]){
+        int x = 10;
+        int y = 5;
+        x = x+y; // x now becomes 15
+        y = x-y; // y becomes 10(15-5)
+        x = x-y; // x becomes 5(15-10)
+        System.out.println("After awapping : " + "x = "+x + " y = "+ y);
