@@ -1,6 +1,6 @@
-           Find a peak element which is not smaller than its neighbours?
+       Find a peak element which is not smaller than its neighbours?
 
-public class HighestPeakElement {
+public class SmallestPeak {
 
     public static Integer findPeak(int[] arr) {
         int n = arr.length;
