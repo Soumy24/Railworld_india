@@ -1,5 +1,4 @@
-        Object Collab of Three Classes (School,Student,Subject)
-
+          Object Collab of Three Classes(School,Student,Subject)
 ------------School------------
 public class School {
 

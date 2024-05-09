@@ -1,10 +1,10 @@
-                              Interface in java
+                                  Interface in java
 
 An Interface in Java programming language is defined as an abstract type used to specify the
 behavior of a class. An interface in Java is a blueprint of a behavior. A Java interface contains
 static constants and abstract methods.
 
-                       What are Interfaces in Java?
+                               What are Interfaces in Java? 
 
 The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods
 in the Java interface, not the method body. It is used to achieve abstraction and multiple
@@ -21,3 +21,7 @@ interfaces.
 It is also used to achieve loose coupling.
 Interfaces are used to implement abstraction
 
+                         Difference Between Class and Interface
+
+Although Class and Interface seem the same there have certain differences between Classes and Interface.
+The major differences between a class and an interface are mentioned below:
