@@ -1,5 +1,9 @@
-          Object Collab of Three Classes(School,Student,Subject)
-------------School------------
+                   Program To Collab 3 Files
+
+              Object Collab of Three Classes (School,Student,Subject)
+
+                                 School
+
 public class School {
 
         private String schoolName;
@@ -47,9 +51,11 @@ public class School {
             school.displaySchoolInfo();
         }
     }
-       --------------------------------------------------
+-------------------------------------------------------------------------------
      
-          ----------------Student----------------
+                   
+                                  Student
+
 class Student {
     private String name;
     private int age;
@@ -79,9 +85,9 @@ class Student {
         return "Name: " + name + ", Age: " + age + ", Class: " + className;
     }
 }
-            ----------------------------------------
+-------------------------------------------------------------------------------------
 
-                -------------Subject------------
+                                  Subject
 
 class Subject {
     private String sub1;
@@ -120,4 +126,3 @@ class Subject {
         return "Sub1= " + sub1 + ", Sub2= " + sub2 + ", Sub3=  " + sub3 + ", Sub4=  " + sub4;
     }
 }
-                  ----------------------------------
