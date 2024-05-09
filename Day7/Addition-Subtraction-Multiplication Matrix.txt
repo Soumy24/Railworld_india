@@ -1,4 +1,4 @@
-                      Calculate the Matrix Addition,Subtraction and Multiplication.
+Calculate the Matrix Addition,Subtraction and Multiplication.
 
                                          
                                   Addition of Matrix

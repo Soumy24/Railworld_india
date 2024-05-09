@@ -1,4 +1,4 @@
-                    Find the Left Triangle and Right Triangle in Matrix?
+               Find the Left Triangle and Right Triangle in Matrix?
 
                                     Left Traingle
 

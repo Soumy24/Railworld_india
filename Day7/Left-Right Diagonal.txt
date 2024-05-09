@@ -1,6 +1,6 @@
-             Find the Left Diagonal And Right Diagonal Matrix?
+                       Find the Left Diagonal And Right Diagonal Matrix?
 
-                          LeftDiagonal
+                                 LeftDiagonal
 
   public class LeftDiagonal
   {
