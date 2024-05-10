@@ -1,4 +1,4 @@
-                                Two-Dimensional Array in Java
+Two-Dimensional Array in Java
 
 
 A two-dimensional array in Java refers to a data structure that sorts elements in a grid-like manner. 
