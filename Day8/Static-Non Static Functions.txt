@@ -1,0 +1,219 @@
+                       Difference between static and non-static method in Java.
+
+   A static method is a method that belongs to a class, but it does not belong to an instance of that class and 
+this method can be called without the instance or object of that class. Every method in java defaults to a non-
+static method without static keyword preceding it. Non-static methods can access any static method and static 
+variable, without creating an instance of the object.
+
+1) Accessing members and methods
+2) Calling process
+3) Binding process
+4) Overriding process
+5) Memory allocation
+
+                                        Accessing members and methods
+
+    A static method can only access static data members and static methods of another class or the same class 
+but cannot access non-static methods and variables. Also, a static method can rewrite the values of any static 
+data member.
+
+    A non-static method can access static data members and static methods as well as non-static members and 
+methods of another class or the same class, and also can change the values of any static data member.
+
+Example 1:
+
+// Java program to Illustrate Calling of a Static Method
+ 
+// Class 1
+
+class App1 {
+ 
+    // Static method
+    public static int sum(int a, int b)
+    {
+        // Simply returning the sum
+        return a + b;
+    }
+}
+ 
+// Class 2
+class Main1 {
+ 
+    // Main driver method
+    public static void main(String[] args)
+    {
+        // Custom values for integer
+        // to be summed up
+
+        int n = 3, m = 6;
+ 
+        // Calling the static method of above class
+        // and storing sum in integer variable
+
+        int s = App1.sum(n, m);
+ 
+        // Print and display the sum
+        System.out.print("sum is = " + s);
+    }
+}
+
+
+
+// Java program to Illustrate Calling of a Non-Static Method
+ 
+// Class 1
+
+class App2 {
+ 
+    // Non-static method
+    public int sum(int a, int b)
+    {
+        // Returning sum of numbers
+        return a + b;
+    }
+}
+ 
+// Class 2
+// Main class
+class Main2 {
+ 
+    // Main driver method
+    public static void main(String[] args)
+    {
+        // Input integers to be summed up
+        int n = 3, m = 6;
+ 
+        // Creating object of above class
+        App2 a = new App();
+ 
+        // Calling above method to compute sum
+        int s = a.sum(n, m);
+ 
+        // Calling the non-static method
+        System.out.print("sum is = " + s);
+    }
+}
+
+                                                Calling process 
+
+The memory of a static method is fixed in the ram, for this reason, we don’t need the object of a class in 
+which the static method is defined to call the static method. To call the method we need to write the class 
+name followed by the name of the method
+
+Syntax: Calling of static methods
+
+class App3{
+ public static void geek()
+ { }
+}
+
+// calling
+App3.geek();
+
+The memory of the non-static method is not fixed in the ram, so we need a class object to call a non-static 
+method. To call the method we need to write the name of the method followed by the class object name.
+
+Syntax: Calling of non-static methods
+
+class App4{
+ public void geek()
+ { }
+}
+
+// creating object
+App4 a = new App4();
+
+// calling
+a.geek();
+
+                                                 Binding process 
+
+ In the static method, the method use compile-time or early binding. For this reason, we can access the static 
+method without creating an instance. In a non-static method, the method use runtime or dynamic binding. So that
+we cannot access a non-static method without creating an instance. 
+
+                                                 Overriding 
+
+In the static method, we cannot override a static method, because of early binding. 
+
+Example 1:
+
+
+// Override of static method
+class Parent {
+ 
+    // static method
+    static void show()
+    {
+        System.out.println("Parent");
+    }
+}
+ 
+// Parent inherit in Child class
+class Child extends Parent {
+ 
+    // override show() of Parent
+    void show()
+    {
+        System.out.println("Child");
+    }
+}
+ 
+class GFG {
+    public static void main(String[] args)
+    {
+        Parent p = new Parent();
+        // calling Parent's show()
+        p.show();
+        // cannot override Parent's show()
+    }
+}
+
+ In the non-static method, we can override a non-static method. Because for override we need runtime 
+polymorphism, which happens only in runtime binding. 
+
+Example 2:
+
+
+// Override of non-static method
+ 
+class Parent {
+    void show()
+    {
+        System.out.println("Parent");
+    }
+}
+ 
+// Parent inherit in Child class
+class Child extends Parent {
+ 
+    // override show() of Parent
+    void show()
+    {
+        System.out.println("Child");
+    }
+}
+ 
+class GFG {
+    public static void main(String[] args)
+    {
+        Parent p = new Parent();
+        // calling Parent's show()
+        p.show();
+ 
+        Parent c = new Child();
+        // calling Child's show()
+        c.show();
+    }
+}
+
+                                               Memory allocation 
+
+    In the static method, memory allocation happens only once, because the static keyword fixed a particular 
+memory for that method in ram. So when the method is called every time in a program, each time that particular
+memory is used. For that reason, less memory is allocated.
+
+    In the non-static method, here memory allocation happens when the method is invoked and the memory is 
+allocated every time when the method is called. 
+
+                                           -------------------
