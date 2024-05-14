@@ -1,0 +1,41 @@
+We are learning Git hub
+
+       ------------------------Day 1---------------------------
+
+Step 1 Download git bash from https://git-scm.com/downloads
+
+Step 2 Create a folder where you want to clone your GitHub repository and open gitbash into it
+
+Step 3 Now we have to clone our repository so copy link of your github repository and run this command
+          git clone LINK OF YOUR GITHUB REPOSITORY
+
+Step 4 Now we have to configure our GitHub account in our laptop, so for that
+
+          Step 1 Run a command to add your GitHub email
+                            git config --global user.email "YOUR GITHUB EMAIL"
+          Step 2 Then Run an another command to add your GitHub username
+                            git config --global user.name "YOUR GITHUB USERNAME"
+
+Step 5 To Create BRANCHES in your GitHub repository
+
+          Go inside the folder which you had cloned from the GitHub and open gitbash there and run this command
+                            git checkout -b {BRANCH NAME}
+
+Step 6 To add new or changed files from local storage to your GitHub repository you have to follow these steps
+           Step 1 add files to git
+                            git add [File name]   (To add specified File)
+                            git add .    (To add all files)
+           Step 2 Get the status about your file
+                            git status
+           Step 3 Commit the changes what you have made
+                            git commit -m "Any message you wanted to write"
+           Step 4 push these changes to your repository
+                            git push -u origin BRANCH NAME
+
+                          ------------Day2-------------------
+
+How to collaborate and pull the request
+
+To pull the changes you have to run the command
+git pull link of repository
+

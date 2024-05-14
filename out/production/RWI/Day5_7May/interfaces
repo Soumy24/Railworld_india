@@ -1,0 +1,17 @@
+                                   Interface
+An interface in Java is a blueprint of a class. It has static constants and abstract methods.
+
+
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+
+How to declare an interface?
+An interface is declared by using the interface keyword. It provides total abstraction; means all the methods in an interface are declared with the empty body, and all the fields are public, static and final by default. A class that implements an interface must implement all the methods declared in the interface.
+
+Syntax:
+
+interface <interface_name>{
+
+    // declare constant fields
+    // declare methods that abstract
+    // by default.
+}
