@@ -1,0 +1,9 @@
+                                Inheritance
+
+
+Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+
+Why use inheritance in java
+For Method Overriding (so runtime polymorphism can be achieved).
+For Code Reusability.
+Terms used in Inheritance

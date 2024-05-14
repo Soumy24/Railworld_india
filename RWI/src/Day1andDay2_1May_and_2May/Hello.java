@@ -1,4 +1,4 @@
-package Day1;
+package Day1andDay2_1May_and_2May;
 
 public class Hello
 {
