@@ -10,7 +10,7 @@ public class MapentrySet {
         Map<String, Integer> map = new HashMap<>();
         map.put("Abhik", 1);
         map.put("Chirag", 2);
-        map.put("Darshit", 3);
+        map.put("Darshitg", 3);
 
         // Get the entry set
         Set<Map.Entry<String, Integer>> entrySet = map.entrySet();
