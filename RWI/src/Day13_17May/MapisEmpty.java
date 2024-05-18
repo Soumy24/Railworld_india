@@ -1,5 +1,9 @@
-package Day13_17May;
+/*
+This method is used to check if a map is having any entry for key and value pairs. If no
+mapping exists, then this returns true.
+ */
 
+package Day13_17May;
 import java.util.HashMap;
 import java.util.Map;
 
