@@ -1,3 +1,8 @@
+/*
+This method is used to retrieve or fetch the value mapped by a particular key mentioned in
+the parameter. It returns NULL when the map contains no such mapping for the key.
+ */
+
 package Day13_17May;
 
 import java.util.HashMap;

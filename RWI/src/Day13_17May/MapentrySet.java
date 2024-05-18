@@ -1,3 +1,9 @@
+/*
+This method is used in Map Interface in Java to create a set out of the same elements
+contained in the map. It basically returns a set  view of the map or we can create a new set
+and store the map elements into them.
+ */
+
 package Day13_17May;
 
 import java.util.HashMap;

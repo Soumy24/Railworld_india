@@ -1,5 +1,9 @@
-package Day13_17May;
+/*
+This method is used in Java Map Interface to associate the specified value with the
+specified key in this map.
+ */
 
+package Day13_17May;
 import java.util.HashMap;
 import java.util.Map;
 

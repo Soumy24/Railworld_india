@@ -1,3 +1,9 @@
+/*
+This method is used in Java Map Interface to check for equality between two maps. It
+verifies whether the elements of one map passed as a parameter is equal to the elements of
+this map or not.
+ */
+
 package Day13_17May;
 
 import java.util.HashMap;

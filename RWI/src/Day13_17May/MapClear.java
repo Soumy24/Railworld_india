@@ -1,3 +1,8 @@
+/*
+This method is used in Java Map Interface to clear and remove all of the elements or
+mappings from a specified Map collection.
+ */
+
 package Day13_17May;
 import java.util.HashMap;
 import java.util.Map;
