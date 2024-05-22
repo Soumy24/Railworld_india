@@ -1,0 +1,141 @@
+Create 3 Tables SCHOOL, STUDENT, COURSE SHOW RELEVANT DATA in SQL.
+
+//Using ALIAS
+
+1) CREATE DATABASE DATABASENAME;
+
+Query OK, 1 row affected (0.00 sec)
+
+2) USE DATABASENAME;
+
+3) CREATE TABLE SCHOOL (SchoolID INT PRIMARY KEY, SchoolName VARCHAR(100), Location VARCHAR
+   (100));
+
+Query OK, 0 rows affected (0.04 sec)
+
+4) CREATE TABLE STUDENT (StudentID INT PRIMARY KEY, StudentName VARCHAR(100), Age INT,
+   SchoolID INT, FOREIGN KEY (SchoolID) REFERENCES SCHOOL (SchoolID));
+
+ Query OK, 0 rows affected (0.05 sec)
+
+5) CREATE TABLE COURSE (CourseID INT PRIMARY KEY, CourseName VARCHAR(100), Credits INT,
+   SchoolID INT, FOREIGN KEY (SchoolID) REFERENCES SCHOOL (SchoolID));
+
+   Query OK, 0 rows affected (0.03 sec)
+
+6) INSERT INTO SCHOOL (SchoolID, SchoolName, Location) VALUES (1, 'Eastern', 'Bhopal'),
+    (2, 'Central India', 'Nagpur'), (3, 'Prestige', 'Indore');
+
+   Query OK, 3 rows affected (0.00 sec)
+   Records: 3  Duplicates: 0  Warnings: 0
+
+ 7) INSERT INTO STUDENT (StudentID, StudentName, Age, SchoolID) VALUES (101, 'Sonu', 15, 1),
+    (102, 'Amar', 16, 2), (103, 'Ratan', 17, 3);
+
+   Query OK, 3 rows affected (0.00 sec)
+   Records: 3  Duplicates: 0  Warnings: 0
+
+ 8) INSERT INTO COURSE (CourseID, CourseName, Credits, SchoolID) VALUES (201, 'Mathematics',
+    4, 1), (202, 'Science', 3, 2), (203, 'History', 2, 3);
+
+   Query OK, 3 rows affected (0.00 sec)
+   Records: 3  Duplicates: 0  Warnings: 0
+
+ 9) SELECT s.StudentName AS Student, c.CourseName AS Course, sc.SchoolName AS School
+    FROM STUDENT s JOIN SCHOOL sc ON s.SchoolID = sc.SchoolID JOIN COURSE c ON sc.SchoolID =
+    c.SchoolID ORDER BY s.StudentName;
+   +---------+-------------+---------------+
+   | Student | Course      | School        |
+   +---------+-------------+---------------+
+   | Amar    | Science     | Central India |
+   | Ratan   | History     | Prestige      |
+   | Sonu    | Mathematics | Eastern       |
+   +---------+-------------+---------------+
+   3 rows in set (0.00 sec)
+
+                                 -------------------
+
+                                 //USING INNER JOIN
+
+1) CREATE DATABASE DATABASENAME;
+
+   Query OK, 1 row affected (0.00 sec)
+
+2) USE DATABASENAME;
+
+3) CREATE TABLE SCHOOL (school_id INT PRIMARY KEY, school_name VARCHAR(100), location
+   VARCHAR(100));
+
+   Query OK, 0 rows affected (0.05 sec)
+
+4) CREATE TABLE STUDENT (student_id INT PRIMARY KEY, student_name VARCHAR(100), age INT,
+   school_id INT, FOREIGN KEY (school_id) REFERENCES School (school_id));
+
+   Query OK, 0 rows affected (0.41 sec)
+
+5) CREATE TABLE COURSE (course_id INT PRIMARY KEY, course_name VARCHAR(100), student_id INT,
+    FOREIGN KEY (student_id) REFERENCES Student (student_id));
+
+   Query OK, 0 rows affected (0.03 sec)
+
+6) INSERT INTO SCHOOL (school_id, school_name, location) VALUES (1, 'Eastern', 'Bhopal'),
+   (2, 'Central India', 'Nagpur'), (3, 'Satya Sai', 'Indore');
+
+   Query OK, 3 rows affected (0.00 sec)
+   Records: 3  Duplicates: 0  Warnings: 0
+
+7) INSERT INTO STUDENT (student_id, student_name, age, school_id) VALUES (1, 'John', 14, 1),
+   (2, 'Nehal', 12, 2), (3, 'Amar', 16, 3), (4, 'Prem', 15, 1);
+
+   Query OK, 4 rows affected (0.01 sec)
+   Records: 4  Duplicates: 0  Warnings: 0
+
+8) INSERT INTO COURSE (course_id, course_name, student_id) VALUES (1, 'Mathematics', 1),
+   (2, 'Science', 2), (3, 'History', 3), (4, 'Chemistry', 4), (5, 'Physics', 1);
+
+   Query OK, 5 rows affected (0.02 sec)
+   Records: 5  Duplicates: 0  Warnings: 0
+
+
+ 9) SELECT STUDENT.student_id, STUDENT.student_name, STUDENT.age, SCHOOL.school_name,
+    SCHOOL.location FROM STUDENT INNER JOIN SCHOOL ON STUDENT.school_id = SCHOOL.school_id;
+    +------------+--------------+------+---------------+----------+
+    | student_id | student_name | age  | school_name   | location |
+    +------------+--------------+------+---------------+----------+
+    |          1 | John         |   14 | Eastern       | Bhopal   |
+    |          2 | Nehal        |   12 | Central India | Nagpur   |
+    |          3 | Amar         |   16 | Satya Sai     | Indore   |
+    |          4 | Prem         |   15 | Eastern       | Bhopal   |
+    +------------+--------------+------+---------------+----------+
+    4 rows in set (0.00 sec)
+
+10) SELECT COURSE.course_id, COURSE.course_name, STUDENT.student_name FROM COURSE INNER JOIN
+    STUDENT ON COURSE.student_id = STUDENT.student_id;
+    +-----------+-------------+--------------+
+    | course_id | course_name | student_name |
+    +-----------+-------------+--------------+
+    |         1 | Mathematics | John         |
+    |         5 | Physics     | John         |
+    |         2 | Science     | Nehal        |
+    |         3 | History     | Amar         |
+    |         4 | Chemistry   | Prem         |
+    +-----------+-------------+--------------+
+    5 rows in set (0.00 sec)
+
+11) SELECT SCHOOL.school_name, STUDENT.student_name, COURSE.course_name FROM COURSE INNER
+    JOIN STUDENT  ON COURSE.student_id = STUDENT.student_id INNER JOIN School ON
+    STUDENT.school_id = SCHOOL.school_id;
++---------------+--------------+-------------+
+| school_name   | student_name | course_name |
++---------------+--------------+-------------+
+| Eastern       | John         | Mathematics |
+| Eastern       | John         | Physics     |
+| Central India | Nehal        | Science     |
+| Satya Sai     | Amar         | History     |
+| Eastern       | Prem         | Chemistry   |
++---------------+--------------+-------------+
+5 rows in set (0.00 sec)
+
+
+
+
