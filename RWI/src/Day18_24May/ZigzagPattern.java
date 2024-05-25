@@ -22,7 +22,7 @@ public class ZigzagPattern {
 
         StringBuilder result = new StringBuilder();
         for (StringBuilder row : rows) {
-            result.append(row).append("\n"); // Add newline between rows for better visualization
+            result.append(row).append("\n");
         }
 
         return result.toString();
