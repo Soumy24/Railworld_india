@@ -1,3 +1,8 @@
+/*
+A factorial of a number is the product of all positive integers less than or equal to that
+number.It is denoted by n!.
+ */
+
 package Day10_14May;
 // Print the Factorial Using Recursionpublic class Factorial {
 public class Factorial {
