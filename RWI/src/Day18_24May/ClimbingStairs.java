@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ClimbingStairs {
 
-    // Function to count the number of ways to climb n stairs
+
     public static int climbStairs(int n) {
         if (n == 1) return 1;
         if (n == 2) return 2;
@@ -22,7 +22,7 @@ public class ClimbingStairs {
         return dp[n];
     }
 
-    // Function to print all the distinct ways to climb n stairs
+
     public static void printWays(int n, List<Integer> path) {
         if (n == 0) {
             System.out.println(path);
@@ -45,10 +45,8 @@ public class ClimbingStairs {
     public static void main(String[] args) {
         int n = 2;
 
-        // Printing the number of distinct ways
         System.out.println("Number of distinct ways: " + climbStairs(n));
 
-        // Printing all the distinct ways
         System.out.println("Distinct ways to climb to the top:");
         printWays(n, new ArrayList<>());
     }

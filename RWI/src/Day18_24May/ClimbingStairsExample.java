@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ClimbingStairsExample {
 
-    // Function to print all the distinct ways to climb n stairs
+
     public static void printWays(int n, List<Integer> path) {
         if (n == 0) {
             System.out.println(path);
