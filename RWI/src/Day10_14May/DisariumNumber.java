@@ -1,5 +1,10 @@
+/*
+A Disarium number is a number where the sum of its digits, each raised to the
+power of their respective positions,equals the number itself.
+*/
+
 package Day10_14May;
-// Print the Disarium Number Using Recursion
+
 public class DisariumNumber {
 
     // Method to count the number of digits in a number
