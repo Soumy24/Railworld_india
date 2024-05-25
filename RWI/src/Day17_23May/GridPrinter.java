@@ -1,4 +1,4 @@
-package Day18_24May;
+package Day17_23May;
 
 public class GridPrinter {
 

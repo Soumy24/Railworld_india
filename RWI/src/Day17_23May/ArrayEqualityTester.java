@@ -1,6 +1,4 @@
-package Day18_24May;
-
-import java.util.Arrays;
+package Day17_23May;
 
 public class ArrayEqualityTester {
 
