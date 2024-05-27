@@ -1,0 +1,87 @@
+                          What is JDBC and It's Types ?
+JDBC stands for Java Database Connectivity. JDBC is a Java API to connect and execute the
+ query with the database. It is a part of JavaSE (Java Standard Edition). JDBC API uses JDBC
+ drivers to connect with the database.
+   There are four types of JDBC drivers:
+ 1) JDBC-ODBC Bridge Driver,
+ 2)  Native Driver,
+ 3)  Network Protocol Driver, and
+ 4)  Thin Driver
+
+   We can use JDBC API to access tabular data stored in any relational database. By the help of
+JDBC API, we can save, update, delete and fetch data from the database.It is like Open
+Database Connectivity (ODBC) provided by Microsoft.
+
+                          Why Should We Use JDBC ?
+
+Before JDBC, ODBC API was the database API to connect and execute the query with the database.
+But, ODBC API uses ODBC driver which is written in C language (i.e. platform dependent and
+unsecured). That is why Java has defined its own API (JDBC API) that uses JDBC drivers
+ (written in Java language).
+
+We can use JDBC API to handle database using Java program and can perform the following
+activities:
+
+1) Connect to the database
+2) Execute queries and update statements to the database
+3) Retrieve the result received from the database.
+
+JDBC (Java Database Connectivity) is an API in Java that defines how a client may access a
+database. It provides methods to query and update data in a database and is oriented towards
+ relational databases. Here's a basic outline of how to perform JDBC operations in Java:
+
+                          1. *Load the JDBC Driver*
+
+This step is optional with newer versions of JDBC as the driver manager can detect and load
+available drivers automatically. However, it is good practice to load the driver explicitly to
+ensure compatibility.
+
+     Class.forName("com.mysql.cj.jdbc.Driver");
+
+                         2. *Establish a Connection*
+
+     Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/
+     mydatabase", "username", "password");
+
+                         3. *Create a Statement*
+
+    Create a Statement object to send SQL statements to the database.
+
+  Statement statement = connection.createStatement();
+
+                         4. *Execute a Query*
+
+       Use the Statement object to execute a query and obtain a ResultSet object to retrieve
+   the results.
+
+     ResultSet resultSet = statement.executeQuery("SELECT * FROM mytable");
+     while (resultSet.next()) {
+         System.out.println("Column 1: " + resultSet.getString("column1"));
+         System.out.println("Column 2: " + resultSet.getString("column2"));
+     }
+
+                        5. *Execute an Update*
+
+      To update the database (e.g., INSERT, UPDATE, DELETE), use the executeUpdate method.
+
+ int rowsAffected = statement.executeUpdate("INSERT INTO mytable (column1, column2) VALUES
+ ('value1', 'value2')");
+   System.out.println("Rows affected: " + rowsAffected);
+
+                        6. *Close the Resources*
+
+      It's important to close the ResultSet, Statement, and Connection objects to free up
+    resources.
+
+
+      resultSet.close();
+      statement.close();
+      connection.close();
+
+
+
+
+
+
+
+
