@@ -1,6 +1,4 @@
 package Dao;
-
-
 import models.Bill;
 import DBUtil.DatabaseConnection;
 

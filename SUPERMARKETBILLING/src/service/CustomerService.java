@@ -1,8 +1,6 @@
 package service;
-
 import models.Customer;
 import Dao.CustomerDao;
-
 import java.util.List;
 
 public class CustomerService {

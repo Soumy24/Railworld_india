@@ -23,7 +23,6 @@ public class BillService {
     public void updateBill(Bill bill) {
         billDao.updateBill(bill);
     }
-
     public void deleteBill(int id) {
         billDao.deleteBill(id);
     }
