@@ -1,7 +1,7 @@
                                         Supermarket Billing System Project in Java
 
-               The Supermarket Billing System project is a Java application designed to streamline the billing process in a retail environment.
-               It utilizes a structured approach with DAO (Data Access Object) patterns and service classes to manage interactions with a database.
+    The Supermarket Billing System project is a Java application designed to streamline the billing process in
+     a retail environment. It utilizes a structured approach with DAO (Data Access Object) patterns and service classes to manage interactions with a database.
                The project is built with classes such as CustomerDao, ProductDao, and BillDao, along with Customer, Product, and Bill entity classes.
                 It also includes service classes for business logic and a main class to drive the application.
 

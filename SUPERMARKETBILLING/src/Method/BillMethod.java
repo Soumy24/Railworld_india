@@ -49,9 +49,9 @@ public class BillMethod {
         System.out.print("Enter ID: ");
         int id = scanner.nextInt();
         System.out.print("Enter Amount: ");
-        double amoutn = Double.parseDouble(scanner.nextLine());
+        double amoutn = scanner.nextDouble();
         System.out.print("Enter Date: ");
-        String date = scanner.nextLine();
+        String date = scanner.next();
 
         Bill bill = new Bill();
         bill.setCustomerId(id);
