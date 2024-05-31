@@ -1,72 +1,40 @@
+import java.sql.SQLException;
 import java.util.Scanner;
 
-import Dao.CustomerDao;
-import models.Customer;
-import service.BillService;
-import service.CustomerService;
-import service.ProductService;
+import Method.BillMethod;
+import Method.CustomerMethod;
+import Method.ProductMethod;
+
 
 public class Main {
 
+    private static CustomerMethod cusMethode = new CustomerMethod();
+    private static ProductMethod proMethode = new ProductMethod();
+    private static BillMethod billMethode = new BillMethod();
 
-    private static CustomerService customerService = new CustomerService();
-    private static ProductService productService = new ProductService();
-    private static BillService billService = new BillService();
-
-private static Customer customer= new Customer();
-    private static CustomerDao customerDao= new CustomerDao();
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("SuperMarket Billing System");
-
-            System.out.println("1. Add Customer");
-            System.out.println("2. Get All Customers");
-            System.out.println("3. Update Customer");
-            System.out.println("4. Delete Customer");
-            System.out.println("5. View Customer by ID");
-            System.out.println("6. Exit");
-
-            System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
-
-            switch (choice) {
+            System.out.println("1. Costomer");
+            System.out.println("2. Billing");
+            System.out.println("3. Product");
+            int add=scanner.nextInt();
+            switch(add){
                 case 1:
-                    customerDao.addCustomer();
+                    cusMethode.customer();
                     break;
-
                 case 2:
-                    customerDao.getAllCustomers();
+                    billMethode.billing();
                     break;
                 case 3:
-                    customerDao.updateCustomer();
-                    break;
-                case 4:
-                    customerDao.deleteCustomer();
-                    break;
-                case 5:
-                    customerDao.getCustomerById();
-                    break;
-                case 6:
+                    proMethode.product();
 
-                    System.out.println("Exiting...");
-
-                    return;
+                    break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Invalid");
             }
+
         }
     }
-
-
-
-
-
-
-
-
-
-
-    }
-
+}

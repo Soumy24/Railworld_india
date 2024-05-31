@@ -1,7 +1,4 @@
 package Dao;
-
-
-
 import models.Customer;
 import DBUtil.DatabaseConnection;
 
@@ -30,7 +27,6 @@ public class CustomerDao {
         }
         return customers;
     }
-
     public Customer getCustomerById(int id) {
         Customer customer = null;
         String query = "SELECT * FROM customers WHERE id = ?";

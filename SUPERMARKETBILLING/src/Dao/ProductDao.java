@@ -86,8 +86,9 @@ public class ProductDao {
 
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
-        } catch (SQLException e) {
+        } catch (SQLException e){
             e.printStackTrace();
         }
     }
-}
+
+    }

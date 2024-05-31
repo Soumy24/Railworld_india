@@ -1,7 +1,4 @@
 package service;
-
-
-
 import models.Product;
 import Dao.ProductDao;
 
