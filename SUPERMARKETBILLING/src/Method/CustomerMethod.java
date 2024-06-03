@@ -1,27 +1,30 @@
 package Method;
+
 import models.Customer;
 import service.CustomerService;
-
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomerMethod {
+public class CustomerMethod
+{
 
     private CustomerService customerService = new CustomerService();
     private Scanner scanner = new Scanner(System.in);
 
-    public void customer() throws SQLException {
+    public void customer() throws SQLException
+    {
         System.out.println("1. Add Customer");
-        System.out.println("2. Get All Customers");
+        System.out.println("2. View All Customers");
         System.out.println("3. Update Customer");
         System.out.println("4. Delete Customer");
         System.out.println("5. View Customer by ID");
         System.out.println("6. Exit");
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
-        switch (choice) {
+        scanner.nextLine();
+        switch (choice)
+        {
             case 1:
                 addCustomer();
                 break;
@@ -44,7 +47,8 @@ public class CustomerMethod {
                 System.out.println("Invalid choice. Please try again.");
         }
     }
-    public void addCustomer() throws SQLException {
+    public void addCustomer() throws SQLException
+    {
         System.out.print("Enter name: ");
         String name = scanner.nextLine();
         System.out.print("Enter Contact: ");
@@ -58,15 +62,18 @@ public class CustomerMethod {
         System.out.println("Customer added successfully!");
     }
 
-    public void viewAllCustomer() throws SQLException {
+    public void viewAllCustomer() throws SQLException
+    {
         List<Customer> customers = customerService.getAllCustomers();
         System.out.println("\nEmployee List:");
-        for (Customer customer : customers) {
+        for (Customer customer : customers)
+        {
             System.out.println("ID: " + customer.getId() + ", Name: " + customer.getName() +
                     ", Contact Number: " + customer.getContact());
         }
     }
-    public void updateCustomer() throws SQLException {
+    public void updateCustomer() throws SQLException
+    {
         System.out.print("Enter Customer ID to update: ");
         int id = Integer.parseInt(scanner.nextLine());
 
@@ -84,7 +91,8 @@ public class CustomerMethod {
         System.out.println("Customer updated successfully!");
     }
 
-    public void deleteCustomer() throws SQLException {
+    public void deleteCustomer() throws SQLException
+    {
         System.out.print("Enter Customer ID to delete: ");
         int id = Integer.parseInt(scanner.nextLine());
 
@@ -92,15 +100,20 @@ public class CustomerMethod {
         System.out.println("Customer deleted successfully!");
     }
 
-    public void viewCustomerById() throws SQLException {
+    public void viewCustomerById() throws SQLException
+    {
         System.out.print("Enter Customer ID to view: ");
         int id = Integer.parseInt(scanner.nextLine());
 
+
         Customer customer = customerService.getCustomerById(id);
-        if (customer != null) {
+        if (customer != null)
+        {
             System.out.println("ID: " + customer.getId() + ", Name: " + customer.getName() +
                     ", Contact number: " + customer.getContact());
-        } else {
+        }
+        else
+        {
             System.out.println("Customer not found with ID: " + id);
         }
     }

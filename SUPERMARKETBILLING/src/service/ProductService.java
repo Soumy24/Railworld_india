@@ -1,7 +1,6 @@
 package service;
 import models.Product;
 import Dao.ProductDao;
-
 import java.util.List;
 
 public class ProductService {
@@ -27,6 +26,4 @@ public class ProductService {
         productDao.deleteProduct(id);
     }
 
-    public void addProduct(int id, String name, double price, int quantity) {
-    }
 }

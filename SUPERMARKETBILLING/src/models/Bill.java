@@ -1,7 +1,4 @@
 package models;
-
-
-
 public class Bill {
     private int id;
     private int customerId;
@@ -41,4 +38,5 @@ public class Bill {
     {
         this.date = date;
     }
+
 }

@@ -4,6 +4,9 @@ public class Customer {
     private String name;
     private String contact;
 
+
+
+
     // Getters and Setters
     public int getId()
     {
@@ -29,4 +32,6 @@ public class Customer {
     {
         this.contact = contact;
     }
-}
+
+
+    }
