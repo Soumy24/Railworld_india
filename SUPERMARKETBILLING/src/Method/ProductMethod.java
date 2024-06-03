@@ -13,7 +13,7 @@ public class ProductMethod {
 
     public void product() throws SQLException {
         System.out.println("1. Add Product");
-        System.out.println("2. Get All Product");
+        System.out.println("2. View All Product");
         System.out.println("3. Update Product");
         System.out.println("4. Delete Product");
         System.out.println("5. View Product by ID");
@@ -95,7 +95,8 @@ public class ProductMethod {
         System.out.println("product updated successfully!");
     }
 
-    public void deleteProduct() throws SQLException {
+    public void deleteProduct() throws SQLException
+    {
         System.out.print("Enter product ID to delete: ");
         int id = Integer.parseInt(scanner.nextLine());
 
@@ -103,15 +104,19 @@ public class ProductMethod {
         System.out.println("product deleted successfully!");
     }
 
-    public void viewProductById() throws SQLException {
+    public void viewProductById() throws SQLException
+    {
         System.out.print("Enter product ID to view: ");
         int id = Integer.parseInt(scanner.nextLine());
 
         Product product = productService.getProductById(id);
-        if (product != null) {
+        if (product != null)
+        {
             System.out.println("ID: " + product.getId() + ", Name: " + product.getName() +
                     ", Price: " + product.getPrice() + ", Quantity: " + product.getQuantity());
-        } else {
+        }
+        else
+        {
             System.out.println("Employee not found with ID: " + id);
         }
     }

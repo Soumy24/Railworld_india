@@ -1,16 +1,19 @@
 package Method;
+
 import models.Bill;
 import service.BillService;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
-public class BillMethod {
+public class BillMethod
+{
 
     private BillService billService= new BillService();
     private Scanner scanner = new Scanner(System.in);
 
-    public void billing() throws SQLException {
+    public void billing() throws SQLException
+    {
         System.out.println("1. Add Bill");
         System.out.println("2. Get All Bill Data");
         System.out.println("3. Update BillData");
@@ -19,8 +22,9 @@ public class BillMethod {
         System.out.println("6. Exit");
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
-        switch (choice) {
+        scanner.nextLine();
+        switch (choice)
+        {
             case 1:
                 addBill();
                 break;
@@ -45,54 +49,59 @@ public class BillMethod {
     }
 
 
-    public void addBill() throws SQLException {
+    public void addBill() throws SQLException
+    {
         System.out.print("Enter ID: ");
         int id = scanner.nextInt();
         System.out.print("Enter Amount: ");
-        double amoutn = scanner.nextDouble();
+        double amount = scanner.nextDouble();
         System.out.print("Enter Date: ");
         String date = scanner.next();
 
         Bill bill = new Bill();
         bill.setCustomerId(id);
-        bill.setTotalAmount(amoutn);
+        bill.setTotalAmount(amount);
         bill.setDate(date);
 
         billService.addBill(bill);
         System.out.println("Bill added successfully!");
     }
 
-    public void getAllBills() throws SQLException {
+    public void getAllBills() throws SQLException
+    {
         List<Bill> bills = billService.getAllBills();
         System.out.println("\nBill List:");
-        for (Bill bill : bills) {
+        for (Bill bill : bills)
+        {
             System.out.println("ID: " + bill.getId() + ", Customer ID: " + bill.getCustomerId() +
-                    ", Amout: " + bill.getTotalAmount() + ", Date: " + bill.getDate());
+                    ", Amount: " + bill.getTotalAmount() + ", Date: " + bill.getDate());
         }
     }
 
-    public void updateBill() throws SQLException {
+    public void updateBill() throws SQLException
+    {
         System.out.print("Enter bill ID to update: ");
         int id = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Enter new Customer ID: ");
         int id1 = scanner.nextInt();
         System.out.print("Enter new Amount: ");
-        double amoutn = scanner.nextDouble();
+        double amount = scanner.nextDouble();
         System.out.print("Enter new Date: ");
         String date = scanner.nextLine();
 
         Bill bill = new Bill();
         bill.setId(id);
         bill.setCustomerId(id1);
-        bill.setTotalAmount(amoutn);
+        bill.setTotalAmount(amount);
         bill.setDate(date);
 
         billService.updateBill(bill);
         System.out.println("Bill updated successfully!");
     }
 
-    public void deleteBill() throws SQLException {
+    public void deleteBill() throws SQLException
+    {
         System.out.print("Enter bill ID to delete: ");
         int id = Integer.parseInt(scanner.nextLine());
 
@@ -100,15 +109,19 @@ public class BillMethod {
         System.out.println("bill deleted successfully!");
     }
 
-    public void getBillById() throws SQLException {
+    public void getBillById() throws SQLException
+    {
         System.out.print("Enter bill ID to view: ");
         int id = Integer.parseInt(scanner.nextLine());
 
         Bill bill = billService.getBillById(id);
-        if (bill != null) {
+        if (bill != null)
+        {
             System.out.println("ID: " + bill.getId() + ", Customer ID: " + bill.getCustomerId() +
                     ", Amout: " + bill.getTotalAmount() + ", Date: " + bill.getDate());
-        } else {
+        }
+        else
+        {
             System.out.println("Employee not found with ID: " + id);
         }
     }

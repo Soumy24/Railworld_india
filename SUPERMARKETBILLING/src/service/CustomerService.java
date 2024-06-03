@@ -26,6 +26,4 @@ public class CustomerService {
         customerDao.deleteCustomer(id);
     }
 
-    public void addCustomer(int id, String name) {
-    }
 }
